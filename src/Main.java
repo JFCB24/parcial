@@ -9,7 +9,7 @@ import servicios.Recomendador;
  * Escenario demostrativo — TODO estudiante: completar para evidenciar
  * el funcionamiento integral del sistema.
  */
-public class    Main {
+public class Main {
 
     public static void main(String[] args) {
         // Composición: el plan crea sus cursos internamente
