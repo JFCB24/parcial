@@ -21,7 +21,7 @@ Explica la diferencia entre `PlanEstudios ◆— Curso` (composición) y
 `Facultad ◇— PlanEstudios` (agregación). ¿Qué pasaría con los cursos si se
 elimina el plan? ¿Y con los planes si se elimina la facultad?
 
-> _Tu respuesta:En la composición, PlanEstudios crea sus cursos dentro de su constructor. Si el plan deja de existir, sus cursos pierden toda referencia y desaparecen con él. En la agregación, los planes se crean fuera y se registran con agregarPlan(). Si la Facultad desaparece, los planes siguen existiendo porque su ciclo de vida es independiente.._
+> _Tu respuesta:En la composición, PlanEstudios crea sus cursos dentro de su constructor. Si el plan deja de existir, sus cursos pierden toda referencia y desaparecen con él. En la agregación, los planes se crean fuera y se registran con agregarPlan(). Si la Facultad desaparece, los planes siguen existiendo porque su ciclo de vida es independiente._
 
 ---
 
