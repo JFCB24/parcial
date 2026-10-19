@@ -1,6 +1,8 @@
 package servicios;
 
 import cursos.Curso;
+import cursos.CursoElectivo;
+import cursos.CursoNivelatorio;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +13,6 @@ import java.util.List;
 public class Recomendador {
 
     /**
-     * TODO estudiante:
      * Recibe un HistorialAcademico y retorna una lista de cursos recomendados.
      * Regla sugerida:
      *   - Si el promedio es >= 4.0, recomendar cursos electivos.
@@ -19,7 +20,15 @@ public class Recomendador {
      * La lista puede estar vacía si no hay cursos disponibles.
      */
     public List<Curso> recomendar(HistorialAcademico historial) {
-        // TODO: implementar
-        return new ArrayList<>();
+        List<Curso> recomendados = new ArrayList<>();
+        boolean buenPromedio = historial.promedio() >= 4.0;
+        for (Curso c : historial.getEstudiante().getInscritos()) {
+            if (buenPromedio && c instanceof CursoElectivo) {
+                recomendados.add(c);
+            } else if (!buenPromedio && c instanceof CursoNivelatorio) {
+                recomendados.add(c);
+            }
+        }
+        return recomendados;
     }
 }
